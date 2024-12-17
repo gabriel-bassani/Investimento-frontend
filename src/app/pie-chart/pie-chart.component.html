@@ -1,0 +1,15 @@
+<div *ngIf="chartOptions">
+    <div id="chart">
+      <apx-chart
+        [series]="chartOptions.series ?? []"
+        [chart]="chartOptions.chart ?? { type: 'radialBar' }"
+        [plotOptions]="chartOptions.plotOptions ?? {}"
+        [labels]="chartOptions.labels ?? []"
+        [fill]="chartOptions.fill ?? {}" 
+        [title]="chartOptions.title ?? {}"
+        [tooltip]="chartOptions.tooltip ?? {}"
+        [colors]="chartOptions.colors ?? []">
+      </apx-chart>
+    </div>
+  </div>
+    

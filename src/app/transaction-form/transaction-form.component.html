@@ -1,0 +1,9 @@
+<form (submit)="addTransaction($event)">
+    <input type="text" placeholder="Descrição" [(ngModel)]="description" name="description" required />
+    <input type="number" placeholder="Valor" [(ngModel)]="amount" name="amount" required />
+    <select [(ngModel)]="type" name="type">
+      <option value="income">Receita</option>
+      <option value="expense">Despesa</option>
+    </select>
+    <button type="submit">Adicionar</button>
+  </form>

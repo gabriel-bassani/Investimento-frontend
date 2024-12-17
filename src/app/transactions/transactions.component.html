@@ -1,0 +1,9 @@
+<section>
+    <h2>Gerenciar Transações</h2>
+    <app-transaction-form></app-transaction-form>
+    <ul>
+      <li *ngFor="let transaction of transactions">
+        {{ transaction.description }} - R$ {{ transaction.amount }}
+      </li>
+    </ul>
+  </section>

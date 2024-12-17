@@ -1,0 +1,12 @@
+<div id="card">
+    <div id="chart">
+        <apx-chart
+          [series]="chartOptions.series ?? []"
+          [chart]="chartOptions.chart ?? { type: 'radialBar' }"
+          [plotOptions]="chartOptions.plotOptions ?? {}"
+          [labels]="chartOptions.labels ?? []"
+          [stroke]="chartOptions.stroke ?? {}">
+        </apx-chart>
+    </div>
+  </div>
+      
