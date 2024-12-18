@@ -1,9 +1,30 @@
-<form (submit)="addTransaction($event)">
-    <input type="text" placeholder="Descrição" [(ngModel)]="description" name="description" required />
+<form (submit)="addTransaction($event)" class="transaction-form" >
+    <mat-form-field class="input">
+      <mat-label>Categories</mat-label>
+      <mat-select>
+        @for (category of categories; track category) {
+          <mat-option [value]="category.value">{{category.viewValue}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="input">
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="Ex. Pizza" >
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Valor da Transação</mat-label>
+      <input matInput type="number" placeholder="Digite o valor em R$" />
+    </mat-form-field>
+    <button mat-stroked-button class="form-button">Adicionar</button>
+    <!-- <mat-form-field class="">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field> -->
+    <!-- <input type="text" placeholder="Descrição" [(ngModel)]="description" name="description" required />
     <input type="number" placeholder="Valor" [(ngModel)]="amount" name="amount" required />
     <select [(ngModel)]="type" name="type">
       <option value="income">Receita</option>
       <option value="expense">Despesa</option>
     </select>
-    <button type="submit">Adicionar</button>
+    <button type="submit">Adicionar</button> -->
   </form>

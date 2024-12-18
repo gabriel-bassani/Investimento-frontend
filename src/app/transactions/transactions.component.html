@@ -1,9 +1,22 @@
-<section>
-    <h2>Gerenciar Transações</h2>
+<div class="transactions-container">
+  <div class="main-section">
+    <h2>Transactions</h2>
+    <p>Adicione novas transações.</p>
     <app-transaction-form></app-transaction-form>
-    <ul>
-      <li *ngFor="let transaction of transactions">
-        {{ transaction.description }} - R$ {{ transaction.amount }}
-      </li>
-    </ul>
-  </section>
+    <p>Veja aqui todas as suas transações financeiras.</p>
+    <!-- Adicione o conteúdo da seção principal aqui -->
+      <app-transaction-form></app-transaction-form>
+  </div>
+</div>
+<!-- <section class="content">
+    <h2>Gerenciar Transações</h2>
+    <div class="transactions">
+      <app-transaction-form></app-transaction-form>
+      <ul>
+        <li *ngFor="let transaction of transactions">
+          {{ transaction.description }} - R$ {{ transaction.amount }}
+        </li>
+      </ul>
+
+    </div>
+  </section> -->
