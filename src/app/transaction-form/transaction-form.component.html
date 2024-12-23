@@ -3,7 +3,7 @@
       <mat-label>Categories</mat-label>
       <mat-select>
         @for (category of categories; track category) {
-          <mat-option [value]="category.value">{{category.viewValue}}</mat-option>
+          <mat-option [value]="category">{{category}}</mat-option>
         }
       </mat-select>
     </mat-form-field>
@@ -12,10 +12,10 @@
       <input matInput placeholder="Ex. Pizza" >
     </mat-form-field>
     <mat-form-field appearance="fill">
-      <mat-label>Valor da Transação</mat-label>
-      <input matInput type="number" placeholder="Digite o valor em R$" />
+      <mat-label>Transaction value</mat-label>
+      <input matInput type="number" placeholder="Type the value" />
     </mat-form-field>
-    <button mat-stroked-button class="form-button">Adicionar</button>
+    <button mat-stroked-button class="form-button">Add</button>
     <!-- <mat-form-field class="">
       <mat-label>Leave a comment</mat-label>
       <textarea matInput placeholder="Ex. It makes me feel..."></textarea>

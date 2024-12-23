@@ -1,11 +1,39 @@
 <div class="transactions-container">
   <div class="main-section">
     <h2>Transactions</h2>
-    <p>Adicione novas transações.</p>
+    <p>Add new transactions.</p>
     <app-transaction-form></app-transaction-form>
-    <p>Veja aqui todas as suas transações financeiras.</p>
+    <p>See here all of your transactions listed.
     <!-- Adicione o conteúdo da seção principal aqui -->
-      <app-transaction-form></app-transaction-form>
+      <!-- <app-transaction-form></app-transaction-form> -->
+      <table mat-table [dataSource]="transactions" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef> Description </th>
+          <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="category">
+          <th mat-header-cell *matHeaderCellDef> Category </th>
+          <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="value">
+          <th mat-header-cell *matHeaderCellDef> Value </th>
+          <td mat-cell *matCellDef="let element"> {{element.value}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+      
   </div>
 </div>
 <!-- <section class="content">

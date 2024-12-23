@@ -42,7 +42,7 @@ export class BarChartComponent {
   constructor() {
     this.chartOptions = {
       series: [{
-      data: [10, 7, 13]
+      data: [2000, 1290]
     }],
       chart: {
       type: 'bar',
@@ -63,7 +63,7 @@ export class BarChartComponent {
       enabled: false
     },
     xaxis: {
-      categories: ['Cluster 1', 'Cluster 2', 'Cluster 3'
+      categories: ['Earnings', 'Expenses'
       ],
     },
     };

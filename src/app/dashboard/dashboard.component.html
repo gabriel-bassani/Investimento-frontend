@@ -1,7 +1,16 @@
-<section>
-    <h2>Resumo Financeiro</h2>
-    <app-chart></app-chart>
-    <div>
-      <button routerLink="/transactions">Adicionar Transação</button>
+<div class="dashboard-container">
+  <section class="main-section">
+    <div class="title">
+      <h2>Financial Summary</h2>
+      <button mat-mini-fab  aria-label="add transaction button" routerLink="/transactions" id="add-button">
+        <mat-icon>add_circle</mat-icon>
+      </button>
+
     </div>
-  </section>
+      <app-chart></app-chart>
+      <div>
+        <!-- <button routerLink="/transactions">Adicionar Transação</button> -->
+      </div>
+    </section>
+
+</div>

@@ -1,13 +1,22 @@
-section {
-    text-align: center;
-    margin: 20px;
-    vertical-align: middle;
-  }
-  button {
-    padding: 10px 20px;
-    background-color: #6200ea;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+.home-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+  // background-color: #caf0f8; 
+  // background-color: #90e0ef;
+  background-color: #e5e5e5;
+}
+
+.main-section {
+  width: 80%;
+  margin-bottom: 20vh;
+  max-width: 900px; 
+  padding: 20px;
+  background-color: #ffffff; 
+  // background-color: #caf0f8; 
+
+  border-radius: 16px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+}

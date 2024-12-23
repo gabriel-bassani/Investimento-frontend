@@ -14,10 +14,16 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './transaction-form.component.scss'
 })
 export class TransactionFormComponent {
-  categories: any[] = [
-    {value: 'food', viewValue: 'Food'},
-    {value: 'transportation', viewValue: 'Transportation'},
-    {value: 'entertainment', viewValue: 'Entertainment'},
+  categories = [
+    "Subscriptions",
+    "Transportation",
+    "Food",
+    "Leisure",
+    "Health",
+    "Education",
+    "Clothing",
+    "Others",
+    "Earnings"
   ];
   description = '';
   amount: number | null = null;
