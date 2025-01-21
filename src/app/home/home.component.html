@@ -2,6 +2,13 @@
   <section class="main-section">
       <h1>Personal Finance Manager</h1>
       <p>Control your expenses, define goals, and reach your financial objectives.</p>
+      <p-carousel [value]="images" [numVisible]="3" [numScroll]="3" [circular]="true" >
+        <ng-template let-image #item>
+            <div style="padding: 10px;" >
+                <img [src]="image" alt="Carousel image" width="500px" />
+            </div>
+        </ng-template>
+    </p-carousel>
       <button mat-stroked-button routerLink="/dashboard" >Start</button>
     </section>
 

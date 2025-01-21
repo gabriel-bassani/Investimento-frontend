@@ -1,7 +1,7 @@
-<form (submit)="addTransaction($event)" class="transaction-form" >
+<form (submit)="addTransaction()" class="transaction-form" >
     <mat-form-field class="input">
       <mat-label>Categories</mat-label>
-      <mat-select>
+      <mat-select [formControl]="newTransaction.category">
         @for (category of categories; track category) {
           <mat-option [value]="category">{{category}}</mat-option>
         }
@@ -9,11 +9,11 @@
     </mat-form-field>
     <mat-form-field class="input">
       <mat-label>Description</mat-label>
-      <input matInput placeholder="Ex. Pizza" >
+      <input matInput placeholder="Ex. Pizza" [(ngModel)]="newTransaction.description" name="description" >
     </mat-form-field>
     <mat-form-field appearance="fill">
       <mat-label>Transaction value</mat-label>
-      <input matInput type="number" placeholder="Type the value" />
+      <input matInput type="number" placeholder="Type the value" [(ngModel)]="newTransaction.value" name="value" />
     </mat-form-field>
     <button mat-stroked-button class="form-button">Add</button>
     <!-- <mat-form-field class="">

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { TransactionService } from '../transaction.service';
+import { TransactionService } from '../services/transaction.service'; 
 import { TransactionFormComponent } from '../transaction-form/transaction-form.component';
 import { ChartComponent } from '../chart/chart.component';
 import { NgFor } from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
+import { OnInit } from '@angular/core';
 
 const transactionsArray = [
   {
@@ -69,15 +70,30 @@ const transactionsArray = [
   templateUrl: './transactions.component.html',
   styleUrl: './transactions.component.scss'
 })
-export class TransactionsComponent {
+export class TransactionsComponent implements OnInit {
   displayedColumns: string[] = ['description', 'category', 'value'];
-  transactions: any = null;
+  // transactions: any = null;
+  transactions: any[] = [];
 
   constructor(private transactionService: TransactionService) {
     // this.transactions = this.transactionService.getTransactions();
     console.log('displayedColumns', this.displayedColumns);
     
-    this. transactions = transactionsArray;
+    // this.transactions = transactionsArray;
+  }
+  ngOnInit(): void {
+    this.loadTransactions();
+  }
+
+  loadTransactions(): void {
+    this.transactionService.getTransactions().subscribe({
+      next: (data) => {
+        this.transactions = data;
+        
+      },
+      error: (error) => console.error(error)
+
+    })
   }
 
 }

@@ -89,13 +89,13 @@ export class VBarChartComponent {
       xaxis: {
         categories: [
           "Subscriptions",
-          "Transportation",
+          "Transport",
           "Food",
-          "Leisure",
+          "Entertainment",
           "Health",
           "Education",
-          "Clothing",
-          "Others"
+          "Miscellaneous",
+          "Income"
         ],
         labels: {
           style: {

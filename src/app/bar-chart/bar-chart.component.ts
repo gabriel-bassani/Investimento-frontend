@@ -63,7 +63,7 @@ export class BarChartComponent {
       enabled: false
     },
     xaxis: {
-      categories: ['Earnings', 'Expenses'
+      categories: ['Income', 'Expenses'
       ],
     },
     };

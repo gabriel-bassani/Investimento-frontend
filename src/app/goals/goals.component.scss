@@ -1,4 +1,4 @@
-.dashboard-container {
+.goals-container {
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -10,7 +10,7 @@
   
   .main-section {
     width: 80%;
-    max-width: 1300px; 
+    max-width: 900px; 
     padding: 20px;
     background-color: #ffffff; 
     // background-color: #caf0f8; 
@@ -18,22 +18,13 @@
     border-radius: 16px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     text-align: center;
-    top: 80px;
-    position: absolute;
-  }
-  .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px; /* Ajuste conforme necessário */
   }
   
-  #add-button {
-    margin-left: auto; /* Garante que o botão fique à direita */
+  .main-section h2 {
+    margin-bottom: 16px;
   }
-
-  #error-button {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
+  
+  .main-section p {
+    font-size: 16px;
+    color: #555555;
   }

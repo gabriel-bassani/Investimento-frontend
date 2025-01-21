@@ -49,13 +49,13 @@ export class PieChartComponent {
       },
       labels: [
         "Subscriptions",
-        "Transportation",
+        "Transport",
         "Food",
-        "Leisure",
+        "Entertainment",
         "Health",
         "Education",
-        "Clothing",
-        "Others",
+        "Miscellaneous",
+        "Income"
       ], // Status de pods
       dataLabels: {
         enabled: false // Desabilitar labels nos gráficos

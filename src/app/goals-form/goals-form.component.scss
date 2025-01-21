@@ -1,0 +1,12 @@
+.goals-form .input {
+    width: 100%; /* Garante que todos os inputs ocupem 100% do espaço permitido */
+    max-width: 300px; /* Define uma largura máxima consistente */
+    margin-right: 16px; /* Espaçamento entre campos */
+  }
+  
+  .goals-form div {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    justify-content: space-between; /* Distribui os inputs igualmente */
+  }
+  

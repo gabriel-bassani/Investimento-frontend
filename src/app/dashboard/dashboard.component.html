@@ -8,9 +8,18 @@
 
     </div>
       <app-chart></app-chart>
+      <div class="title">
+        <h2>Goals</h2>
+      </div>
+      @for (goal of goals; track goal) {
+        <app-goals-chart [data]="goal" ></app-goals-chart>
+      }
       <div>
         <!-- <button routerLink="/transactions">Adicionar Transação</button> -->
       </div>
     </section>
+    <button mat-mini-fab  aria-label="attention button" id="error-button" (click)="openWarningDialog()">
+      <mat-icon>error</mat-icon>
+    </button>
 
 </div>
